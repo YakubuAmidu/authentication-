@@ -1,22 +1,16 @@
-import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import React, {Component} from 'react';
+import {View, Text} from 'react-native';
+import {Header} from './components/common';
 
-class App extends Component{
-  render(){
-    return(
-      <View style={styles.viewStyle}>
-        <Text>App</Text>
+class App extends Component {
+  render() {
+    return (
+      <View>
+        <Header headerText="Authentication" />
+        <Text>An App!</Text>
       </View>
-    )
+    );
   }
 }
-
-const styles = StyleSheet.create({
-  viewStyle: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
 
 export default App;
