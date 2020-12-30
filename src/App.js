@@ -28,11 +28,19 @@ class App extends Component {
     });
   }
 
+  renderContent() {
+    if (this.state.loggedIn) {
+      return <Button>Log out</Button>;
+    } else {
+      return <LoginForm />;
+    }
+  }
+
   render() {
     return (
       <View>
         <Header headerText="Authentication" />
-        <LoginForm />
+        {this.renderContent()}
       </View>
     );
   }
