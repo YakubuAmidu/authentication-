@@ -10,7 +10,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    firebase.initializeApp({});
+    firebase.initializeApp({yuuuuuu});
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
