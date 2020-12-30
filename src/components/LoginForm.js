@@ -50,7 +50,7 @@ class LoginForm extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress={this.onButtonPress}>Log in</Button>
+          <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>
         </CardSection>
       </Card>
     );
@@ -60,6 +60,8 @@ class LoginForm extends Component {
 const styles = {
   errorTextStyle: {
     fontSize: 18,
+    paddingTop: 10,
+    paddingBottom: 15,
     color: 'red',
     alignSelf: 'center',
   },
