@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, TouchableHighlightBase} from 'react-native';
+import {Text} from 'react-native';
 import firebase from 'firebase';
 import {Button, Card, CardSection, Input} from './common';
 
