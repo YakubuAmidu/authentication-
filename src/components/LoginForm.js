@@ -19,7 +19,7 @@ class LoginForm extends Component {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(this.onLogInSuccess.bind(this))
+      .then(this.onLoginSuccess.bind(this))
       .catch(() => {
         firebase
           .auth()
@@ -46,7 +46,7 @@ class LoginForm extends Component {
 
   renderButton() {
     if (this.state.loading) {
-      return <Spinner size="small" />;
+      return <Spinner size="large" />;
     } else {
       return <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>;
     }
