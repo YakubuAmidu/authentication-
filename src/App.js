@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
 import firebase from 'firebase';
-import {Header} from './components/common';
+import {Header, Spinner} from './components/common';
 import LoginForm from './components/LoginForm';
 
 class App extends Component {
   state = {
-    loggedIn: false,
+    loggedIn: null,
   };
 
   componentDidMount() {
@@ -29,10 +29,13 @@ class App extends Component {
   }
 
   renderContent() {
-    if (this.state.loggedIn) {
-      return <Button>Log out</Button>;
-    } else {
-      return <LoginForm />;
+    switch (this.state.loggedIn) {
+      case true:
+        return <Button>Log out</Button>;
+      case false:
+        return <LoginForm />;
+      default:
+        return <Spinner />;
     }
   }
 
